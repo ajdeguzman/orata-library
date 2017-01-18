@@ -5,23 +5,27 @@
         <item
             android:id="@+id/nav_search"
             android:icon="@drawable/ic_menu_search"
-            android:title="Search" />
+            android:title="@string/nav_menu_search" />
         <item
             android:id="@+id/nav_acquisitions"
             android:icon="@drawable/ic_book_black_24dp"
-            android:title="New Acquisitions" />
+            android:title="@string/nav_menu_new_acquisitions" />
+        <item
+            android:id="@+id/nav_policies"
+            android:icon="@drawable/ic_book_black_24dp"
+            android:title="@string/nav_menu_policies" />
         <item
             android:id="@+id/nav_bookmarks"
             android:icon="@drawable/ic_book_black_24dp"
-            android:title="Bookmarks" />
+            android:title="@string/nav_menu_bookmarks" />
         <item
             android:id="@+id/nav_recent"
             android:icon="@drawable/ic_menu_recent"
-            android:title="Recent" />
+            android:title="@string/nav_menu_recent" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Settings" />
+            android:title="@string/nav_menu_settings" />
     </group>
 
     <item android:title="About">

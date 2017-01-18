@@ -82,5 +82,11 @@
 
     <!--User Defined-->
     <string name="lbl_msg_search_keyword">Search Book…</string>
+    <string name="nav_menu_search">Search</string>
+    <string name="nav_menu_policies">Policies &amp; Guidelines</string>
+    <string name="nav_menu_new_acquisitions">New Acquisitions</string>
+    <string name="nav_menu_bookmarks">Bookmarks</string>
+    <string name="nav_menu_recent">Recent</string>
+    <string name="nav_menu_settings">Settings</string>
 
 </resources>
