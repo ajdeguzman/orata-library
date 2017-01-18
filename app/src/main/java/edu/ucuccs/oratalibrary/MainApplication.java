@@ -7,6 +7,8 @@ package edu.ucuccs.oratalibrary;
 
 import android.app.Application;
 
+import edu.ucuccs.oratalibrary.R;
+import edu.ucuccs.oratalibrary.TextField;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 public class MainApplication extends Application {

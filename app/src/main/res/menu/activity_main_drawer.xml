@@ -3,41 +3,41 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_search"
-            android:icon="@drawable/ic_menu_search"
-            android:title="@string/nav_menu_search" />
+            android:id="@+id/nav_featured"
+            android:icon="@drawable/ic_check_circle_black_24dp"
+            android:title="@string/nav_menu_featured" />
         <item
             android:id="@+id/nav_acquisitions"
-            android:icon="@drawable/ic_book_black_24dp"
+            android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
             android:title="@string/nav_menu_new_acquisitions" />
         <item
             android:id="@+id/nav_policies"
-            android:icon="@drawable/ic_book_black_24dp"
+            android:icon="@drawable/ic_receipt_black_24dp"
             android:title="@string/nav_menu_policies" />
         <item
             android:id="@+id/nav_bookmarks"
-            android:icon="@drawable/ic_book_black_24dp"
+            android:icon="@drawable/ic_turned_in_not_black_24dp"
             android:title="@string/nav_menu_bookmarks" />
         <item
             android:id="@+id/nav_recent"
             android:icon="@drawable/ic_menu_recent"
             android:title="@string/nav_menu_recent" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_settings"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/nav_menu_settings" />
     </group>
 
-    <item android:title="About">
+    <item android:title="@string/nav_menu_about">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/nav_rate"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="@string/nav_menu_rate_the_app" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="License" />
+                android:title="@string/nav_menu_license" />
         </menu>
     </item>
 
