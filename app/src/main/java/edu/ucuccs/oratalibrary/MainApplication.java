@@ -7,8 +7,6 @@ package edu.ucuccs.oratalibrary;
 
 import android.app.Application;
 
-import edu.ucuccs.oratalibrary.R;
-import edu.ucuccs.oratalibrary.TextField;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 public class MainApplication extends Application {
@@ -16,7 +14,7 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/Lato-Regular.ttf")
+                .setDefaultFontPath("fonts/Proxima-Nova.ttf")
                 .setFontAttrId(R.attr.fontPath)
                 .addCustomStyle(TextField.class, R.attr.textFieldStyle)
                 .build()

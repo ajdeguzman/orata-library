@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mListCategories.add("SCIENCE & MATH");
         mListCategories.add("RELIGION");
         mListCategories.add("SEE ALL");
-        addChipsViewFinal(mListCategories);
+        //addChipsViewFinal(mListCategories);
     }
 
     @Override
@@ -118,23 +118,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.nav_featured) {
-            getSupportActionBar().setTitle(R.string.nav_menu_featured);
-        } else if (id == R.id.nav_acquisitions) {
-            getSupportActionBar().setTitle(R.string.nav_menu_new_acquisitions);
-        } else if (id == R.id.nav_bookmarks) {
-            getSupportActionBar().setTitle(R.string.nav_menu_bookmarks);
-        } else if (id == R.id.nav_policies) {
-            getSupportActionBar().setTitle(R.string.nav_menu_policies);
-        } else if (id == R.id.nav_recent) {
-            getSupportActionBar().setTitle(R.string.nav_menu_recent);
-        } else if (id == R.id.nav_settings) {
-            startActivity(new Intent(this, SettingsActivity.class));
-            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
-        } else if (id == R.id.nav_rate) {
-            openAppOnPlaystore();
-        } else if (id == R.id.nav_send) {
-
+        if(getSupportActionBar() != null){
+            if (id == R.id.nav_featured) {
+                getSupportActionBar().setTitle(R.string.nav_menu_featured);
+            } else if (id == R.id.nav_acquisitions) {
+                getSupportActionBar().setTitle(R.string.nav_menu_new_acquisitions);
+            } else if (id == R.id.nav_bookmarks) {
+                getSupportActionBar().setTitle(R.string.nav_menu_bookmarks);
+            } else if (id == R.id.nav_policies) {
+                getSupportActionBar().setTitle(R.string.nav_menu_policies);
+            } else if (id == R.id.nav_recent) {
+                getSupportActionBar().setTitle(R.string.nav_menu_recent);
+            } else if (id == R.id.nav_settings) {
+                startActivity(new Intent(this, SettingsActivity.class));
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+            } else if (id == R.id.nav_rate) {
+                openAppOnPlaystore();
+            } else if (id == R.id.nav_send) {
+            }
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

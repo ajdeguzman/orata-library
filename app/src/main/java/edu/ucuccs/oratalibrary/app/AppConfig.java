@@ -11,6 +11,6 @@ public class AppConfig {
     public static final String BASE_URL = "http://192.168.4.141/opac-test/v1/";
 
     //Production
-    //public static final String BASE_URL = "http://192.168.4.141/opac/index.php";
+    //public static final String BASE_URL = "http://ucu.edu.ph/opac-api/index.php";
 
 }
