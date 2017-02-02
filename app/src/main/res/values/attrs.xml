@@ -3,4 +3,11 @@
 
     <attr name="textFieldStyle" format="reference" />
 
+    <declare-styleable name="SpinKitView">
+        <attr name="SpinKit_Style">
+            <enum name="Wave" value="2" />
+            <enum name="ThreeBounce" value="6" />
+        </attr>
+        <attr name="SpinKit_Color" format="color" />
+    </declare-styleable>
 </resources>

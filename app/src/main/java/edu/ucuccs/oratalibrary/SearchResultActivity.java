@@ -7,6 +7,7 @@
 package edu.ucuccs.oratalibrary;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
@@ -16,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -35,6 +37,8 @@ import java.util.List;
 
 import edu.ucuccs.oratalibrary.app.AppConfig;
 import edu.ucuccs.oratalibrary.app.Utils;
+import edu.ucuccs.oratalibrary.lib.style.ThreeBounce;
+import edu.ucuccs.oratalibrary.lib.style.Wave;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class SearchResultActivity extends AppCompatActivity {
@@ -47,6 +51,7 @@ public class SearchResultActivity extends AppCompatActivity {
     private static final String TAG = SearchResultActivity.class.getSimpleName();
     private ArrayList<String> mBookTitle = new ArrayList<>();
     private ArrayList<String> mBookAuthor = new ArrayList<>();
+    ProgressBar mProgressSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +62,9 @@ public class SearchResultActivity extends AppCompatActivity {
         mRecyViewSearchResult   = (RecyclerView) findViewById(R.id.recyview_search_result);
         mLinearEmptyState       = (LinearLayout) findViewById(R.id.layout_empty_state);
         mLinearProgressState    = (LinearLayout) findViewById(R.id.layout_progress_state);
+        mProgressSearch         = (ProgressBar) findViewById(R.id.progress_bar);
 
+        createProgressWave();
         setupToolbar();
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,19 +83,22 @@ public class SearchResultActivity extends AppCompatActivity {
         mRecyViewSearchResult.setHasFixedSize(true);
         loadSearchResult();
     }
+    void createProgressWave(){
+        Wave wave = new Wave();
+        wave.setColor(Color.BLACK);
+        mProgressSearch.setIndeterminateDrawable(wave);
+    }
     private void loadSearchResult() {
-        mLinearEmptyState.setVisibility(View.VISIBLE);
+        mLinearProgressState.setVisibility(View.VISIBLE);
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonObjectRequest obreq = new JsonObjectRequest(Request.Method.GET,  AppConfig.BASE_URL + "books/title/" + mSearchKeyword, null, new Response.Listener<JSONObject>() {
 
             @Override
             public void onResponse(JSONObject response) {
-                mLinearEmptyState.setVisibility(View.GONE);
+                mLinearProgressState.setVisibility(View.GONE);
                 try {
                     JSONArray mArrBooks = response.getJSONArray("books");
-                    Log.d(TAG, "onResponse: " + mArrBooks.length());
-                    Log.d(TAG, "response: " + response.toString());
                     clearArray();
                     for (int i = 0; i < mArrBooks.length(); i++) {
                         JSONObject mObjBook = mArrBooks.getJSONObject(i);

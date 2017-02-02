@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="4dp"
     android:layout_marginRight="4dp"
-    android:background="@android:color/white"
+    android:background="@color/colorCardBack"
     android:orientation="vertical"
     card_view:cardCornerRadius="1dp"
     card_view:cardElevation="3dp"
@@ -15,7 +15,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:background="#E7E7E7"
+        android:background="@android:color/white"
         android:orientation="vertical">
 
         <LinearLayout
@@ -27,7 +27,6 @@
 
             <ImageView
                 android:layout_width="60dp"
-                android:layout_height="60dp"
                 android:padding="8dp"
                 android:paddingEnd="30dp"
                 android:paddingLeft="30dp"
@@ -35,7 +34,8 @@
                 android:paddingStart="30dp"
                 android:scaleType="centerCrop"
                 tools:ignore="ContentDescription"
-                card_view:srcCompat="@mipmap/ic_launcher" />
+                card_view:srcCompat="@mipmap/ic_launcher"
+                android:layout_height="80dp" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -55,14 +55,15 @@
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:textStyle="bold"
-                        android:paddingLeft="10dp"
-                        android:paddingStart="10dp"
-                        android:paddingRight="10dp"
-                        android:paddingEnd="10dp"
-                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingStart="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingEnd="5dp"
+                        android:maxLines="2"
                         android:textColor="#252525"
                         android:textSize="17sp"
-                        android:typeface="sans" />
+                        android:typeface="sans"
+                        android:minLines="2" />
 
 
                     <TextView
@@ -70,12 +71,12 @@
                         android:layout_width="187dp"
                         android:layout_height="wrap_content"
                         android:ellipsize="marquee"
-                        android:paddingLeft="10dp"
-                        android:paddingStart="10dp"
-                        android:paddingRight="10dp"
-                        android:paddingEnd="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingStart="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingEnd="5dp"
                         android:maxLines="1"
-                        android:textColor="#A4A4A4"
+                        android:textColor="@android:color/darker_gray"
                         android:textSize="13sp"
                         android:typeface="sans" />
                 </LinearLayout>

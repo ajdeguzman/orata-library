@@ -3,5 +3,6 @@
     <color name="colorPrimary">#464E65</color>
     <color name="colorPrimaryDark">#3C4258</color>
     <color name="colorAccent">#464D69</color>
-    <color name="colorAccentMenu">#c7275f</color>
+    <color name="colorSubAccent">#c7275f</color>
+    <color name="colorCardBack">#EFEDEF</color>
 </resources>
